@@ -24,7 +24,7 @@ namespace Contact_List
                  */
                 #endregion
 
-                DatabaseConnection dbConnection = DatabaseConnection.DbConnectInstance;
+                var dbConnection = DatabaseConnection.DbConnectInstance;
                 dbConnection.BuildConnection(sqlQuery);
                 dbConnection.GetSqlCommand().Parameters.AddWithValue("@ContactID", connectionID);
 
@@ -43,7 +43,7 @@ namespace Contact_List
         {
             string sqlQuery = "Select * FROM ContactList";
 
-            DatabaseConnection dbConnection = DatabaseConnection.DbConnectInstance;
+            var dbConnection = DatabaseConnection.DbConnectInstance;
             dbConnection.BuildConnection(sqlQuery);
 
             gridView.DataSource = dbConnection.CreateDataSetAndAdapter();

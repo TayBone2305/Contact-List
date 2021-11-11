@@ -16,7 +16,10 @@ namespace Contact_List
 
         private static readonly DatabaseConnection dbConnectInstance = new DatabaseConnection();
 
-        private DatabaseConnection() { }
+        private DatabaseConnection() 
+        { 
+        
+        }
 
         public static DatabaseConnection DbConnectInstance
         {
