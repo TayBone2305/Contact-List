@@ -28,11 +28,7 @@ namespace Contact_List
                 dbConnection.BuildConnection(sqlQuery);
                 dbConnection.GetSqlCommand().Parameters.AddWithValue("@ContactID", connectionID);
 
-                var dataSet = new DataSet();
-                var sqlDataAdapter = new SqlDataAdapter(dbConnection.GetSqlCommand());
-                sqlDataAdapter.Fill(dataSet);
-
-                repeaterView.DataSource = dataSet;
+                repeaterView.DataSource = dbConnection.CreateDataSetAndAdapter();
                 repeaterView.DataBind();
 
                 dbConnection.GetSqlConnection().Close();
@@ -50,11 +46,7 @@ namespace Contact_List
             DatabaseConnection dbConnection = DatabaseConnection.DbConnectInstance;
             dbConnection.BuildConnection(sqlQuery);
 
-            var dataSet = new DataSet();
-            var sqlDataAdapter = new SqlDataAdapter(dbConnection.GetSqlCommand());
-            sqlDataAdapter.Fill(dataSet);
-
-            gridView.DataSource = dataSet;
+            gridView.DataSource = dbConnection.CreateDataSetAndAdapter();
             gridView.DataBind();
 
             dbConnection.GetSqlConnection().Close();

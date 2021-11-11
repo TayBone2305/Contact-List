@@ -20,16 +20,17 @@
             </asp:Label>
             <br />
             <br />
-            <asp:DropDownList ID="gender" runat="server" Height="20px" Width="206px">
-                <asp:ListItem Value="" disabled selected hidden>Please Select Gender</asp:ListItem>
-                <asp:ListItem Value="Male"></asp:ListItem>
-                <asp:ListItem Value="Female"></asp:ListItem>
-                <asp:ListItem Value="Other"></asp:ListItem>
+            <asp:DropDownList ID="gender" runat="server" Height="20px" Width="206px" AppendDataBoundItems="False" AutoPostBack="True" CausesValidation="True">
+                <asp:ListItem Enabled="true" Selected="True" Value="0" Text="Please Select Gender"></asp:ListItem>
+                <asp:ListItem Text="Male"></asp:ListItem>
+                <asp:ListItem Text="Female"></asp:ListItem>
+                <asp:ListItem Text="Other"></asp:ListItem>
             </asp:DropDownList> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
              <asp:RequiredFieldValidator id="genderValidator" runat="server"
-                ControlToValidate="firstName"
+                ControlToValidate="gender"
                 ErrorMessage="Gender is a required field!"
+                SetFocusOnError="true"
                 ForeColor="Red" Height="20px" Width="204px" Font-Size="Small">
              </asp:RequiredFieldValidator>
             <br />

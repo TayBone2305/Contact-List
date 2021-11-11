@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-
 
 namespace Contact_List
 {
@@ -35,14 +35,23 @@ namespace Contact_List
             sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
         }
 
-        public SqlCommand GetSqlCommand()
+        public DataSet CreateDataSetAndAdapter()
         {
-            return sqlCommand;
+            var dataSet = new DataSet();
+            var sqlDataAdapter = new SqlDataAdapter(this.GetSqlCommand());
+            sqlDataAdapter.Fill(dataSet);
+
+            return dataSet;
         }
 
         public SqlConnection GetSqlConnection()
         {
             return sqlConnection;
+        }
+
+        public SqlCommand GetSqlCommand()
+        {
+            return sqlCommand;
         }
     }
 }

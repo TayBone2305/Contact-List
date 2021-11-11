@@ -44,7 +44,7 @@ namespace Contact_List
                     string connectionID = Request.QueryString["ContactID"];
                     string sqlQuery = "Select * From ContactList Where ContactID = @ContactID";
 
-                    DatabaseConnection dbConnection = DatabaseConnection.DbConnectInstance;
+                    var dbConnection = DatabaseConnection.DbConnectInstance;
                     dbConnection.BuildConnection(sqlQuery);
                     dbConnection.GetSqlCommand().Parameters.AddWithValue("@ContactID", connectionID);
 
