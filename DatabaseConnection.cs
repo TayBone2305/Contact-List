@@ -14,6 +14,7 @@ namespace Contact_List
         SqlConnection sqlConnection;
         SqlCommand sqlCommand;
 
+        // Following 3 code units: Declaration of a Singleton
         private static readonly DatabaseConnection dbConnectInstance = new DatabaseConnection();
 
         private DatabaseConnection() 
