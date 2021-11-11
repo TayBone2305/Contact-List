@@ -12,9 +12,10 @@ namespace Contact_List
 {
     public class DatabaseConnection
     {
-        private static readonly DatabaseConnection dbConnectInstance = new DatabaseConnection();
         SqlConnection sqlConnection;
         SqlCommand sqlCommand;
+
+        private static readonly DatabaseConnection dbConnectInstance = new DatabaseConnection();
 
         private DatabaseConnection() { }
 
