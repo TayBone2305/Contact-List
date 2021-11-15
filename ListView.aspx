@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListView.aspx.cs" Inherits="Contact_List.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListView.aspx.cs" Inherits="Contact_List.ListView" %>
 
 <!DOCTYPE html>
 
@@ -8,9 +8,9 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="Form1" runat="server">
         <div>
-            <asp:Repeater ID="repeaterView" runat="server">
+            <asp:Repeater ID="RepeaterView" runat="server">
             <ItemTemplate>  
                 <div>  
                     <table>  
@@ -77,12 +77,12 @@
             <br />
         </div>
         <div>
-            <asp:TextBox ID="search" runat="server" Height="25px" Width="150px"></asp:TextBox>
+            <asp:TextBox ID="Search" runat="server" Height="25px" Width="150px"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="contactsButton" runat="server" Height="30px" Text="Show All Contacts" Width="120px" OnClick="ShowAllContacts_Click" />
+            <asp:Button ID="ContactsButton" runat="server" Height="30px" Text="Show All Contacts" Width="120px" OnClick="ShowAllContacts_Click" />
             <br />
             <br />
-            <asp:GridView ID="gridView" runat="server" OnSelectedIndexChanged="GridView_SelectedIndexChanged" OnPageIndexChanging="GridView_PageIndexChanging" AllowPaging="True">
+            <asp:GridView ID="GridView" runat="server" OnSelectedIndexChanged="GridView_SelectedIndexChanged" OnPageIndexChanging="GridView_PageIndexChanging" AllowPaging="True">
                 <Columns>
                     <asp:CommandField SelectText="Choose" ShowSelectButton="True" />
                 </Columns>

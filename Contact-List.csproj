@@ -215,7 +215,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ContactListModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="SaveIntoAndLoadFromDatabase.cs" />
+    <Compile Include="DatabaseCRUD.cs" />
     <Compile Include="EnumGender.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

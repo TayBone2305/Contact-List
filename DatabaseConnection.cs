@@ -32,20 +32,40 @@ namespace Contact_List
 
         public void BuildConnection(string sqlQuery)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["tayfun_dbConnectionString"].ToString();
-            sqlConnection = new SqlConnection(connectionString);
-            sqlConnection.Open();
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["tayfun_dbConnectionString"].ToString();
+                sqlConnection = new SqlConnection(connectionString);
+                sqlConnection.Open();
 
-            sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+                sqlCommand = new SqlCommand(sqlQuery, sqlConnection);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+            }
+            finally
+            {
+                sqlConnection.Close();
+            }
         }
 
         public DataSet CreateDataSetAndAdapter()
         {
-            var dataSet = new DataSet();
-            var sqlDataAdapter = new SqlDataAdapter(this.GetSqlCommand());
-            sqlDataAdapter.Fill(dataSet);
+            try
+            {
+                var dataSet = new DataSet();
+                var sqlDataAdapter = new SqlDataAdapter(this.GetSqlCommand());
+                sqlDataAdapter.Fill(dataSet);
 
-            return dataSet;
+                return dataSet;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+            }
+
+            return null;
         }
 
         public SqlConnection GetSqlConnection()

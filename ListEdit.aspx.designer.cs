@@ -15,228 +15,228 @@ namespace Contact_List
     {
 
         /// <summary>
-        /// form1-Steuerelement
+        /// Form1-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
 
         /// <summary>
-        /// contactID-Steuerelement
+        /// ContactID-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label contactID;
+        protected global::System.Web.UI.WebControls.Label ContactID;
 
         /// <summary>
-        /// gender-Steuerelement
+        /// Gender-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList gender;
+        protected global::System.Web.UI.WebControls.DropDownList Gender;
 
         /// <summary>
-        /// genderValidator-Steuerelement
+        /// GenderValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator genderValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator GenderValidator;
 
         /// <summary>
-        /// title-Steuerelement
+        /// Title-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox title;
+        protected global::System.Web.UI.WebControls.TextBox Title;
 
         /// <summary>
-        /// firstName-Steuerelement
+        /// FirstName-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox firstName;
+        protected global::System.Web.UI.WebControls.TextBox FirstName;
 
         /// <summary>
-        /// lastName-Steuerelement
+        /// LastName-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lastName;
+        protected global::System.Web.UI.WebControls.TextBox LastName;
 
         /// <summary>
-        /// firstNameValidator-Steuerelement
+        /// FirstNameValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator firstNameValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstNameValidator;
 
         /// <summary>
-        /// lastNameValidator-Steuerelement
+        /// LastNameValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator lastNameValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LastNameValidator;
 
         /// <summary>
-        /// address-Steuerelement
+        /// Address-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox address;
+        protected global::System.Web.UI.WebControls.TextBox Address;
 
         /// <summary>
-        /// addressComplement-Steuerelement
+        /// AddressComplement-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox addressComplement;
+        protected global::System.Web.UI.WebControls.TextBox AddressComplement;
 
         /// <summary>
-        /// addressValidator-Steuerelement
+        /// AddressValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator addressValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AddressValidator;
 
         /// <summary>
-        /// postalCode-Steuerelement
+        /// PostalCode-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox postalCode;
+        protected global::System.Web.UI.WebControls.TextBox PostalCode;
 
         /// <summary>
-        /// city-Steuerelement
+        /// City-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox city;
+        protected global::System.Web.UI.WebControls.TextBox City;
 
         /// <summary>
-        /// postalCodeValidator-Steuerelement
+        /// PostalCodeValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator postalCodeValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PostalCodeValidator;
 
         /// <summary>
-        /// citydValidator-Steuerelement
+        /// CitydValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator citydValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CitydValidator;
 
         /// <summary>
-        /// region-Steuerelement
+        /// Region-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox region;
+        protected global::System.Web.UI.WebControls.TextBox Region;
 
         /// <summary>
-        /// country-Steuerelement
+        /// Country-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox country;
+        protected global::System.Web.UI.WebControls.TextBox Country;
 
         /// <summary>
-        /// countryValidator-Steuerelement
+        /// CountryValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator countryValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CountryValidator;
 
         /// <summary>
-        /// email-Steuerelement
+        /// Email-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox Email;
 
         /// <summary>
-        /// phoneNumber-Steuerelement
+        /// PhoneNumber-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox phoneNumber;
+        protected global::System.Web.UI.WebControls.TextBox PhoneNumber;
 
         /// <summary>
-        /// emailValidator-Steuerelement
+        /// EmailValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator emailValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailValidator;
 
         /// <summary>
-        /// phoneNumberValidator-Steuerelement
+        /// PhoneNumberValidator-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator phoneNumberValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PhoneNumberValidator;
 
         /// <summary>
-        /// message-Steuerelement
+        /// Message-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox message;
+        protected global::System.Web.UI.WebControls.TextBox Message;
 
         /// <summary>
-        /// save-Steuerelement
+        /// Save-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button save;
+        protected global::System.Web.UI.WebControls.Button Save;
     }
 }

@@ -12,15 +12,10 @@ namespace Contact_List
         protected void Page_Load(object sender, EventArgs e)
         {
             // Is it the first time the page loads? -> No
-            if (!Page.IsPostBack)
+            if (Page.IsPostBack == false)
             {
-                // Is there an ID in the URL? -> No
-                if (Request.QueryString["ContactID"] == null)
-                {
-                    ;
-                }
-                // -> Yes
-                else
+                // Is there an ID in the URL? -> Yes
+                if (Request.QueryString["ContactID"] != null)
                 {
                     #region
                     /*** BAD CODE ***
@@ -54,55 +49,41 @@ namespace Contact_List
                     {
                         if (sqlDataReader.HasRows)
                         {
-                            contactID.Text = sqlDataReader.GetGuid(0).ToString();
-                            gender.SelectedItem.Text = sqlDataReader.GetString(1);
-                            title.Text = sqlDataReader.GetString(2);
-                            firstName.Text = sqlDataReader.GetString(3);
-                            lastName.Text = sqlDataReader.GetString(4);
-                            address.Text = sqlDataReader.GetString(5);
-                            addressComplement.Text = sqlDataReader.GetString(6);
-                            postalCode.Text = sqlDataReader.GetInt32(7).ToString();
-                            city.Text = sqlDataReader.GetString(8);
-                            region.Text = sqlDataReader.GetString(9);
-                            country.Text = sqlDataReader.GetString(10);
-                            email.Text = sqlDataReader.GetString(11);
-                            phoneNumber.Text = sqlDataReader.GetString(12);
-                            message.Text = sqlDataReader.GetString(13);
+                            ContactID.Text = sqlDataReader["ContactID"].ToString();
+                            Gender.SelectedItem.Text = sqlDataReader["Gender"].ToString();
+                            Title.Text = sqlDataReader["Title"].ToString();
+                            FirstName.Text = sqlDataReader["FirstName"].ToString();
+                            LastName.Text = sqlDataReader["LastName"].ToString();
+                            Address.Text = sqlDataReader["Address"].ToString();
+                            AddressComplement.Text = sqlDataReader["AddressComplement"].ToString();
+                            PostalCode.Text = sqlDataReader["PostalCode"].ToString();
+                            City.Text = sqlDataReader["City"].ToString();
+                            Region.Text = sqlDataReader["Region"].ToString();
+                            Country.Text = sqlDataReader["Country"].ToString();
+                            Email.Text = sqlDataReader["Email"].ToString();
+                            PhoneNumber.Text = sqlDataReader["PhoneNumber"].ToString();
+                            Message.Text = sqlDataReader["Message"].ToString();
                         }
                     }
 
                     sqlDataReader.Close();
                     dbConnection.GetSqlConnection().Close();
                 }
-            }
-            // -> Yes
-            else
-            {
-                ;
-            }
+            }          
         }
 
         protected void SaveOrUpdate_Click(object sender, EventArgs e)
         {
             Guid guid;
-            var eGen = new EnumGender();
-            Genders genders = eGen.GetGender(gender.SelectedItem.Text);
-            int postalCodes = Convert.ToInt32(postalCode.Text);
+            var gender = new EnumGender();
+            Genders genders = gender.GetGender(Gender.SelectedItem.Text);
+            int postalCodes = Convert.ToInt32(PostalCode.Text);
 
-            var contact = new SaveIntoAndLoadFromDatabase();
-
-            if (Request.QueryString["ContactID"] == null)
+            if (Request.QueryString["ContactID"] != null)
             {
-                guid = Guid.NewGuid(); 
-                contact.InsertDataIntoDatabase(guid, genders, title.Text, firstName.Text, lastName.Text, address.Text, addressComplement.Text,
-                                               postalCodes, city.Text, region.Text, country.Text, email.Text, phoneNumber.Text, message.Text);
-
-            }
-            else
-            {
-                guid = new Guid(contactID.Text);
-                contact.UpdateDataInDatabase(guid, genders, title.Text, firstName.Text, lastName.Text, address.Text, addressComplement.Text,
-                                             postalCodes, city.Text, region.Text, country.Text, email.Text, phoneNumber.Text, message.Text);
+                guid = new Guid(ContactID.Text);
+                DatabaseCRUD.UpdateDataInDatabase(guid, genders, Title.Text, FirstName.Text, LastName.Text, Address.Text, AddressComplement.Text,
+                                                  postalCodes, City.Text, Region.Text, Country.Text, Email.Text, PhoneNumber.Text, Message.Text);
 
                 #region
                 /*** ALTERNATIVE CODE FOR UPDATING DATA IN DATABASE ***
@@ -154,6 +135,12 @@ namespace Contact_List
                 conSql.Close();
                 ***/
                 #endregion
+            }
+            else
+            {
+                guid = Guid.NewGuid();
+                DatabaseCRUD.InsertDataIntoDatabase(guid, genders, Title.Text, FirstName.Text, LastName.Text, Address.Text, AddressComplement.Text,
+                                                    postalCodes, City.Text, Region.Text, Country.Text, Email.Text, PhoneNumber.Text, Message.Text);
             }
 
             Response.Redirect("ListView.aspx?ContactID=" + guid);

@@ -11,52 +11,52 @@ namespace Contact_List
 {
 
 
-    public partial class WebForm1
+    public partial class ListView
     {
 
         /// <summary>
-        /// form1-Steuerelement
+        /// Form1-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
 
         /// <summary>
-        /// repeaterView-Steuerelement
+        /// RepeaterView-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater repeaterView;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterView;
 
         /// <summary>
-        /// search-Steuerelement
+        /// Search-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox search;
+        protected global::System.Web.UI.WebControls.TextBox Search;
 
         /// <summary>
-        /// contactsButton-Steuerelement
+        /// ContactsButton-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button contactsButton;
+        protected global::System.Web.UI.WebControls.Button ContactsButton;
 
         /// <summary>
-        /// gridView-Steuerelement
+        /// GridView-Steuerelement
         /// </summary>
         /// <remarks>
         /// Automatisch generiertes Feld
         /// Zum Ändern Felddeklaration aus der Designerdatei in eine Code-Behind-Datei verschieben.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridView;
+        protected global::System.Web.UI.WebControls.GridView GridView;
     }
 }
